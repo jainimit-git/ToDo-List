@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app">
+        <header class="head">
+            <p class="tag">STAY ON TRACK</p>
+            <h1>My tasks</h1>
+            <p class="sub">A little progress goes a long way.</p>
+        </header>
+
+        <form class="form" id="task-form">
+            <label class="label" for="task-input">Add a task</label>
+            <div class="row">
+                <input class="input" id="task-input" name="task" type="text"
+                    placeholder="What needs to get done?" required>
+                <button class="btn" type="button">Add task</button>
+            </div>
+        </form>
+
+        <section class="tasks" aria-labelledby="tasks-title">
+            <h2 id="tasks-title">Your task list</h2>
+            <ul class="list" id="task-list">
+                
+            </ul>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

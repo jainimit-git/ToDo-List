@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 32px 16px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, #dbeafe, #f3e8ff);
+    color: #20243a;
+    font-family: Arial, sans-serif;
+}
+
+.app {
+    width: min(100%, 520px);
+    padding: 32px;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 12px 36px #3035681c;
+}
+
+.head {
+    margin-bottom: 28px;
+}
+
+.tag {
+    margin: 0 0 8px;
+    color: #6956c8;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+h1,
+h2,
+p {
+    margin-top: 0;
+}
+
+h1 {
+    margin-bottom: 8px;
+    font-size: 30px;
+}
+
+.sub {
+    margin-bottom: 0;
+    color: #74788a;
+}
+
+.label,
+.tasks h2 {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+.input {
+    min-width: 0;
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #dfe1e8;
+    border-radius: 8px;
+    font: inherit;
+}
+
+.input:focus {
+    outline: 2px solid #8978e5;
+    border-color: transparent;
+}
+
+ul li {
+    list-style: none;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9GsQ096MB-4mRwN5HxgOE1wUbDE2HZ7HQM-rjr6eJdA&s=10);
+    background-size: cover;
+    background-position: center;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked {
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXL_04PTiTgIXmbYcxUDhEkQ3O87d7BeVbohvgHVNlhQ&s=10);
+}
+
+.btn {
+    padding: 0 16px;
+    border: 0;
+    border-radius: 8px;
+    background: #6956c8;
+    color: #fff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #5542b3;
+}
+
+.tasks {
+    margin-top: 28px;
+}
+
+.tasks h2 {
+    margin-bottom: 12px;
+}
+
+.list {
+    display: grid;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.empty {
+    padding: 14px;
+    border-radius: 8px;
+    background: #f6f6fa;
+    color: #74788a;
+    font-size: 14px;
+}
+
+ul li span{
+    position:absolute;
+    padding:3px;
+    right:0px;
+    top :8px;
+     width:40px;
+     height:40px;
+     line-height:40px;
+     text-align:center;
+}
+
+ul li span:hover{
+    background: #edeef0;
+}
+
+
+@media (max-width: 420px) {
+    .app {
+        padding: 24px 18px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .btn {
+        min-height: 44px;
+    }
+}
